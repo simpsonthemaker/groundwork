@@ -304,6 +304,72 @@
     line-height: 1.6;
   }
 
+  /* INSTRUCTOR */
+  .instructor {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px 100px;
+  }
+  .instructor-card {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 48px;
+    align-items: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 44px;
+  }
+  .instructor-photo img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+  .instructor-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+  .instructor-text h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+  }
+  .instructor-role {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.3px;
+    margin-bottom: 22px;
+  }
+  .instructor-bio {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+    margin-bottom: 18px;
+  }
+  .instructor-quote {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--accent);
+    line-height: 1.5;
+    margin: 22px 0;
+    padding-left: 20px;
+    border-left: 3px solid var(--accent);
+  }
+  .instructor-note {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
   /* TESTIMONIALS */
   .testimonials {
     max-width: 1000px;
@@ -456,6 +522,9 @@
     .feature-grid, .testimonial-grid { grid-template-columns: 1fr; }
     .disciplines-row { gap: 20px; }
     .quote-banner blockquote { font-size: 20px; padding: 32px 20px; }
+    .instructor-card { grid-template-columns: 1fr; text-align: center; padding: 32px 24px; }
+    .instructor-photo img { max-width: 200px; margin: 0 auto; }
+    .instructor-quote { text-align: left; }
   }
 </style>
 </head>
@@ -557,6 +626,24 @@
   </div>
 </section>
 
+<!-- INSTRUCTOR -->
+<section class="instructor">
+  <div class="instructor-card">
+    <div class="instructor-photo">
+      <img src="assets/nick-photo.jpg" alt="Nick Mitchelmore, Groundwork instructor">
+    </div>
+    <div class="instructor-text">
+      <div class="instructor-label">Meet your instructor</div>
+      <h2>Nick Mitchelmore</h2>
+      <p class="instructor-role">College Educator, Academic Upgrading &amp; ESL Literature | M.Ed, TESL</p>
+      <p class="instructor-bio">Nick Mitchelmore teaches English literature and academic upgrading at a college in Northern Alberta, helping second-language adult students complete their Canadian high school diploma, from foundational English through grade 10, 11, and 12.</p>
+      <p class="instructor-bio">His approach starts concrete: building vocabulary and plot comprehension first, then moving toward critical analysis, authorial intention, and independent thought. The goal isn't just comprehension, it's confidence, fluency, and the ability to build an argument, support it with evidence, and write with real structure.</p>
+      <div class="instructor-quote">"My purpose is to make literature less intimidating and a lot more interesting."</div>
+      <p class="instructor-note">Nick holds a Master's degree in Education with a focus on English as a Second Language. Fresh off a literary tour of the UK, from Charles Dickens' house to Shakespeare's workshop to an afternoon of poetry readings, he's now building out Groundwork's literature program full time.</p>
+    </div>
+  </div>
+</section>
+
 <!-- TESTIMONIALS -->
 <section class="testimonials">
   <div class="testimonials-header">
@@ -641,7 +728,14 @@ const translations = {
     ctaTitle: "Ready to start?",
     ctaDesc: "Book a free introductory session. No sales pitch. Just a conversation about where you are and what would help.",
     ctaBtn: "Book a consultation",
-    footer: "&copy; 2026 Groundwork. Literature &amp; Academic Foundations."
+    footer: "&copy; 2026 Groundwork. Literature &amp; Academic Foundations.",
+    instructorLabel: "Meet your instructor",
+    instructorName: "Nick Mitchelmore",
+    instructorRole: "College Educator, Academic Upgrading & ESL Literature | M.Ed, TESL",
+    instructorBio1: "Nick teaches English literature and academic upgrading at a college in Northern Alberta, helping second-language adult students complete their Canadian high school diploma, from foundational English through grade 10, 11, and 12.",
+    instructorBio2: "His approach starts concrete: building vocabulary and plot comprehension first, then moving toward critical analysis, authorial intention, and independent thought. The goal isn't just comprehension, it's confidence, fluency, and the ability to build an argument, support it with evidence, and write with real structure.",
+    instructorQuote: '"My purpose is to make literature less intimidating and a lot more interesting."',
+    instructorNote: "Nick holds a Master's degree in Education with a focus on English as a Second Language. Fresh off a literary tour of the UK, from Charles Dickens' house to Shakespeare's workshop to an afternoon of poetry readings, he's now building out Groundwork's literature program full time."
   },
   zh: {
     navAbout: "关于我们",
@@ -676,7 +770,14 @@ const translations = {
     ctaTitle: "准备好了吗？",
     ctaDesc: "预约一次免费的初次咨询。没有推销，只是聊聊你目前的情况和需要什么帮助。",
     ctaBtn: "预约咨询",
-    footer: "&copy; 2026 Groundwork · 文学与学术基础"
+    footer: "&copy; 2026 Groundwork · 文学与学术基础",
+    instructorLabel: "认识你的导师",
+    instructorName: "Nick Mitchelmore",
+    instructorRole: "学院教育者，学术升级与ESL文学课程 | 教育学硕士，TESL",
+    instructorBio1: "Nick在阿尔伯塔省北部一所学院教授英语文学与学术升级课程，帮助以英语为第二语言的成年学生完成加拿大高中文凭要求，从基础英语一路学到10、11、12年级。",
+    instructorBio2: "他的教学方法从具体入手，先建立词汇量和情节理解，再逐步过渡到批判性分析、作者意图解读与独立思考。目标不仅是理解课文，更是培养自信、流利表达，以及构建论点、运用证据、写出结构清晰文章的能力。",
+    instructorQuote: '"我的目标是让文学不再令人生畏，而是变得更有趣。"',
+    instructorNote: "Nick持有教育学硕士学位，专注于英语作为第二语言教学。刚结束英国文学之旅归来，参观了狄更斯故居、莎士比亚工作坊，还参加了一场诗歌朗诵会，他正全职投入打造Groundwork的文学课程。"
   }
 };
 
@@ -724,6 +825,16 @@ function setLang(lang) {
   cards[2].querySelector('p').textContent = t.f3Desc;
   cards[3].querySelector('h3').textContent = t.f4Title;
   cards[3].querySelector('p').textContent = t.f4Desc;
+
+  // Instructor
+  document.querySelector('.instructor-label').textContent = t.instructorLabel;
+  document.querySelector('.instructor-text h2').textContent = t.instructorName;
+  document.querySelector('.instructor-role').textContent = t.instructorRole;
+  const instructorBios = document.querySelectorAll('.instructor-bio');
+  instructorBios[0].textContent = t.instructorBio1;
+  instructorBios[1].textContent = t.instructorBio2;
+  document.querySelector('.instructor-quote').textContent = t.instructorQuote;
+  document.querySelector('.instructor-note').textContent = t.instructorNote;
 
   // Testimonials
   document.querySelector('.testimonials-header h2').textContent = t.testTitle;
