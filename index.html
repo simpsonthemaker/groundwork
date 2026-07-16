@@ -21,6 +21,14 @@
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #features, #instructor {
+    scroll-margin-top: 32px;
+  }
+
   body {
     font-family: 'DM Sans', sans-serif;
     background: var(--bg);
@@ -546,8 +554,8 @@
     Groundwork
   </div>
   <div class="nav-links">
-    <a href="#">About</a>
-    <a href="#">Resources</a>
+    <a href="#instructor">About</a>
+    <a href="#features">Resources</a>
     <a href="#" class="btn-signup">Get started</a>
   </div>
 </nav>
@@ -587,7 +595,7 @@
 </section>
 
 <!-- FEATURES -->
-<section class="features">
+<section class="features" id="features">
   <h2>Build the foundations that last.</h2>
   <p>Not tutoring. Not test prep. A structured approach to the skills that underpin everything else.</p>
   <div class="feature-grid">
@@ -631,7 +639,7 @@
 </section>
 
 <!-- INSTRUCTOR -->
-<section class="instructor">
+<section class="instructor" id="instructor">
   <div class="instructor-card">
     <div class="instructor-photo">
       <img src="assets/nick-photo.jpg" alt="Nick Mitchelmore, Groundwork instructor">
